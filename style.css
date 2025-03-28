@@ -1,0 +1,84 @@
+.clock {
+    margin: 100px auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 3px solid grey;
+    position: relative;
+    outline: dotted 6px gray;
+    outline-offset: 5px;
+}
+
+.arrow1 {
+    height: 90px;
+    width: 4px;
+    transform-origin: bottom;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: grey;
+    transform: translate(-50%, -100%);
+    animation-name: clockAnimationseconds;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+    animation-timing-function: steps(60);
+}
+
+
+.arrow2 {
+    height: 75px;
+    width: 4px;
+    transform-origin: bottom;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: grey;
+    transform: translate(-50%, -100%);
+    animation-name: clockAnimationminutes;
+    animation-iteration-count: infinite;
+    animation-duration: 3600s;
+    animation-timing-function: steps(60);
+}
+
+.arrow3 {
+    height: 60px;
+    width: 4px;
+    transform-origin: bottom;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: grey;
+    transform: translate(-50%, -100%);
+    animation-name: clockAnimationhours;
+    animation-iteration-count: infinite;
+    animation-duration: 86400s;
+    animation-timing-function: steps(12);
+}
+
+@keyframes clockAnimationseconds {
+    0% {
+        transform: translate(-50%, -100%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -100%) rotateZ(360deg);
+
+    }
+}
+
+@keyframes clockAnimationminutes {
+    0% {
+        transform: translate(-50%, -100%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -100%) rotateZ(360deg);
+    }
+}
+
+@keyframes clockAnimationhours {
+    0% {
+        transform: translate(-50%, -100%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -100%) rotateZ(360deg);
+    }
+}
